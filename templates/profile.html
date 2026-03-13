@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h>Bu profile sahifasi</h>
+<h1>Salom {{ user.username }}</h1>
+<p>Ism: {{ user.first_name }}</p>
+<p>Familiya: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Is Active: {{ user.is_active }}</p>
+
+<form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Tizimni tark etish!</button>
+</form>
+    <a href="{% url 'home' %}">Orqaga qaytish</a>
+
+</body>
+</html>
